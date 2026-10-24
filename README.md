@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # <jc/prompt> — Personal Prompt Storage
 
 A clean, high-contrast, distraction-free storage website for AI master prompts and custom prompt libraries with sticky workbench controls and Markdown formatting.
@@ -37,3 +38,6 @@ To add more prompts, add them into [`src/data/prompts.js`](file:///c:/Users/Leno
 npm run dev
 ```
 Open **[http://localhost:5173/](http://localhost:5173/)** in your browser.
+=======
+# jc-prompt-storage
+>>>>>>> 454077c346b4704aa4a2116fb27f1f259e8e1a66
