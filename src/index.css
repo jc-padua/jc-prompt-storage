@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Technical Blueprint Grid Texture */
+.bg-lines-dark {
+  background-color: #050505;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-lines-light {
+  background-color: #fcfcfc;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Subtle dotted grid for inside cards */
+.bg-dots-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-dots-light {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Minimalist scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+}
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* Clean Technical Markdown Typography */
+.markdown-body {
+  word-break: break-word;
+}
+.markdown-body h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  letter-spacing: -0.02em;
+}
+.dark .markdown-body h1 {
+  color: #ffffff;
+}
+.light .markdown-body h1 {
+  color: #000000;
+}
+
+.markdown-body h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.dark .markdown-body h2 {
+  color: #ffffff;
+}
+.light .markdown-body h2 {
+  color: #000000;
+}
+
+.markdown-body h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.dark .markdown-body h3 {
+  color: #f5f5f5;
+}
+.light .markdown-body h3 {
+  color: #1a1a1a;
+}
+
+.markdown-body h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+.dark .markdown-body strong {
+  color: #ffffff;
+}
+.light .markdown-body strong {
+  color: #000000;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.markdown-body li {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+.markdown-body blockquote {
+  border-left: 2px solid rgba(128, 128, 128, 0.4);
+  padding-left: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+}
+
+.markdown-body code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+.dark .markdown-body code {
+  background-color: #171717;
+  border: 1px solid #2e2e2e;
+  color: #e5e5e5;
+}
+.light .markdown-body code {
+  background-color: #f0f0f0;
+  border: 1px solid #dcdcdc;
+  color: #1a1a1a;
+}
+
+.markdown-body hr {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 0;
+  border-top: 1px dashed rgba(128, 128, 128, 0.3);
+}
